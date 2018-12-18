@@ -115,6 +115,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="story1.cpp" />
+    <ClCompile Include="story2.cpp" />
+    <ClCompile Include="story3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="story1.h" />
+    <ClInclude Include="story2.h" />
+    <ClInclude Include="story3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
