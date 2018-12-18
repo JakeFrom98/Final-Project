@@ -19,9 +19,6 @@ void story2() // Second story function
 	int& map = m;
 	int& leave_room = l_r;
 
-	int *pointer;
-	pointer = &m;
-
 	cout << "Now that your sanity is back to normal you look around the room and see a few things.\n";
 
 	while (items != 0) // while times doesn't equal 0

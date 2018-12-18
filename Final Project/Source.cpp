@@ -7,6 +7,7 @@
 
 using namespace std;
 
+// Prototyping function
 void passByReference(string *x);
 
 // Global Variables
@@ -14,19 +15,23 @@ int win = 0;
 int sanity = 3;
 int amount_of_sanity_potion = 0;
 
+// Class
 class Insanity
 {
 public:
+	// Once function is called stores name in private
 	void setName(string x)
 	{
 		name = x;
 	}
 
+	// Once getName is called returns the name stored in private
 	string getName()
 	{
 		return name;
 	}
 
+	// Class function used to help explain sanity potion
 	void sanity_explination()
 	{
 		cout << "In this game you will have something called sanity." << endl <<"If your sanity is ever low you may have a hard time looking around to find things and you could die!" << endl;
@@ -38,13 +43,19 @@ private:
 
 int main() // Main function
 {
+	// Incorrect date that is fixed by pointer
 	string pointer = "12/20/2018";
 
+	// Pointer passed by reference giving direct access to pointer variable
 	passByReference(&pointer);
 
+	// Calls Insanity class 
 	Insanity name;
+
+	// Stores name on private in insanity class
 	name.setName("Jacob Silva");
 
+	// name.getName retrieves the name stored in the Insanity classes private.
 	cout << "This program was created for a C++ final the creator of this program is " << name.getName() << "." << endl;
 	cout << "The date of completion for the assignment is " << pointer << "." << endl;
 	system("pause");
@@ -52,6 +63,7 @@ int main() // Main function
 
 	string player_name; // Stores player name into a string
 	cout << "Hello! What is your name? " << endl;
+	// Stores user input in player_name string
 	cin >> player_name;
 
 rerun:
@@ -62,7 +74,9 @@ rerun:
 	cout << "Insanity is a text based horror game.\n";
 	system("cls");
 
+	// Calls insanity class
 	Insanity Insanity;
+	// Calls function in public which prints text
 	Insanity.sanity_explination();
 	system("pause");
 	system("cls");
@@ -115,7 +129,9 @@ rerun:
 	}
 }
 
+// x is the address of pointer variable in main
 void passByReference(string *x)
 {
+	// Correct date that is passed by reference
 	*x= "12/18/2018";
 }
